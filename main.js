@@ -1,5 +1,5 @@
 // Import
-import { imageBookUrl, imageFanArtsUrl, credits } from "./images.js";
+import { coverURL, fotoWisata, namaWisata } from "./images.js";
 import { lyrics } from "./lyrics.js";
 import { timestamp } from "./timestamp.js";
 
@@ -39,8 +39,8 @@ const showModal = (title, description, yesBtnLabel, callback) => {
 }
 //Show modal information
 showModal(
-    "INGFO",
-    "Silahkan klik pada buku di tengah layar atau klik tombol Play untuk mulai memutar lagu dan lirik, Tunggu... dan selamat menikmati<br>Ehe~<br><br>Background credits: @Andrillya92<br>Front-Page book photo credit: @aru_shina",
+    "Informasi",
+    "Website ini dibuat untuk keperluan tugas EAS Bela Negara. <br><br>Website ini menampilkan berbagai tempat wisata disertai dengan iringan dan lirik lagu nasional Indonesia Pusaka Ciptaan Ismail Marzuki. <br><br>Silahkan klik pada buku di tengah layar atau klik tombol Play untuk mulai memutar lagu dan lirik. <br><b><br>Bela Negara G175<br>21081010151<br>Dimas Saputra</b>",
     "Play",
     playSong
 )
@@ -53,9 +53,9 @@ mainPage.style = "z-index: 0;";
 mainPage.innerHTML = `
     <div class="front">
         <div id="f1" class="front-content">
-            <div class="judul custom-font-style">Mantra Hujan</div>
-            <div class="judul custom-font-style">Kobo Kanaeru</div>
-            <img class="cover-img" src="${imageBookUrl}" alt="images">
+            <div class="judul custom-font-style">Indonesia Pusaka</div>
+            <div class="judul custom-font-style">~ Ismail Marzuki ~</div>
+            <img class="cover-img" src="${coverURL}" alt="images">
         </div>
     </div>
     <div class="back">
@@ -75,8 +75,8 @@ for (let i = 0; i < lyrics.length - 1; i++) {
     page.innerHTML = `
     <div class="front">
         <div id="f${i + 2}" class="front-content">
-            <img class="cover-img" src="${imageFanArtsUrl[i]}" alt="images">
-            <div class="author">@${credits[i]} </div>
+            <img class="cover-img" src="${fotoWisata[i]}" alt="images">
+            <div class="author">${namaWisata[i]} </div>
         </div>
     </div>
     <div class="back">
@@ -92,7 +92,7 @@ for (let i = 0; i < lyrics.length - 1; i++) {
 const paper = document.querySelectorAll(".paper")
 
 // Add audio
-let mantraHujan = new Audio("./Mantra-Hujan.mp3")
+let indonesiaPusaka = new Audio("./indonesiaPusaka.mp3")
 
 // Event listeners
 // (Desktop)
@@ -100,6 +100,10 @@ window.addEventListener("keydown", (e) => {
 
     if (e.key === "Enter") {
         playSong();
+    }
+
+    if (e.key === "ArrowRight") {
+        goNext();
     }
 
 })
@@ -110,7 +114,7 @@ coverPage.style = "cursor: pointer;"
 
 function playSong() {
     //Play audio
-    mantraHujan.play()
+    indonesiaPusaka.play()
 
     //Auto flip book
     function sleep(ms) {
