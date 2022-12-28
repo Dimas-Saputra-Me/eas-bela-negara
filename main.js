@@ -40,7 +40,7 @@ const showModal = (title, description, yesBtnLabel, callback) => {
 //Show modal information
 showModal(
     "Informasi",
-    "Website ini dibuat untuk keperluan tugas EAS Bela Negara. <br><br>Website ini menampilkan berbagai tempat wisata disertai dengan iringan dan lirik lagu nasional Indonesia Pusaka Ciptaan Ismail Marzuki. <br><br>Silahkan klik pada buku di tengah layar atau klik tombol Play untuk mulai memutar lagu dan lirik. <br><b><br>Bela Negara G175<br>21081010151<br>Dimas Saputra</b>",
+    "Website ini dibuat untuk keperluan EAS Bela Negara. <br><br>Website ini menampilkan berbagai tempat wisata disertai dengan iringan dan lirik lagu nasional Indonesia Pusaka Ciptaan Ismail Marzuki. <br><br>Silahkan klik pada buku di tengah layar atau klik tombol Play untuk mulai memutar lagu dan lirik. <br><b><br>Bela Negara G175<br>21081010151<br>Dimas Saputra</b>",
     "Play",
     playSong
 )
