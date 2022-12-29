@@ -20,7 +20,7 @@ const showModal = (title, description, yesBtnLabel, callback) => {
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <p>${description}</p>
+              <p align="justify">${description}</p>
             </div>
             <div class="modal-footer bg-light">
               <button id="button" type="button" class="btn btn-primary modal-success-btn" data-bs-dismiss="modal">${yesBtnLabel}</button>
